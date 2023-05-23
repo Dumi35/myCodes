@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #wow{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(135deg, purple, orange);
+        }
+        .wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave svg {
+            position: relative;
+            display: block;
+            width: calc(117% + 1.3px);
+            height: 150px;
+        }
+
+        .wave .shape-fill {
+            fill: #FFFFFF;
+        }
+
+        .custom-shape-divider-bottom-1681137544 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+
+        .custom-shape-divider-bottom-1681137544 svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+
+        .custom-shape-divider-bottom-1681137544 .shape-fill {
+            fill: #FFFFFF;
+        }
+
+    </style>
+</head>
+<body>
+    <section id = "wow">
+        <div class="wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <div class="custom-shape-divider-bottom-1681137544">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <button>Connect via bluetooth</button>
+
+    <script>
+        navigator.bluetooth.getAvailability().then((available) => {
+        if (available) {
+            console.log("This device supports Bluetooth!");
+        } else {
+            console.log("Doh! Bluetooth is not supported");
+        }
+        });
+
+        let button1 = document.querySelector("button")
+
+        let options = {
+            filters: [
+                { services: ["0000110a-0000-1000-8000-00805f9b34fb"]},
+                /*{ services: [0x1802, 0x1803] },
+                { services: ["c48e6067-5295-48d3-8d5c-0395f61792b1"] },   */
+                //{ services: [0x1801] },
+                //{name: "Dumebi"}
+
+                //,0x1105,0x112f,0x1115,,0x1812
+            ]
+            //optionalServices: ["00001801-0000-1000-8000-00805f9b34fb"]
+
+        };
+
+
+        button1.addEventListener("click",()=>{
+            navigator.bluetooth.requestDevice(options).then((device) => {
+                console.log(`Name: ${device.name}`);
+            // Do something with the device.
+            })
+            .catch((error) => console.error(`Something went wrong. ${error}`)); 
+        })
+
+        let p = new Promise((resolve,reject)=>{
+            let a = 3+7
+            if (a==6){resolve("Correct")}
+            else{reject("Wrong")}
+        })
+
+        //p.then((message)=>{console.log("This is "+message)}).catch((message)=>{console.log("This is "+message)})
+        
+
+    </script>
+</body>
+</html>

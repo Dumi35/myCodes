@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @font-face {
+            font-family: "My Font";
+            src: url("LilyScriptOne-Regular.ttf");
+        }
+        body{
+            background-image: url("bg1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            grid-template-areas:
+                "a b c"
+                "a d c"
+                "a f c";
+            grid-template-rows: 70px;
+            grid-template-columns: 50px ;
+        }
+        #container{
+            border: 4px solid orange;
+            border-radius: 15px;
+            width: 50vw;
+            height: 75vh;
+            margin: auto;
+            grid-area: d;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, purple,orange); 
+        }
+        p{
+            color: rgb(59, 59, 187);
+            font-size: 30px;
+            font-weight: bold;
+            height: 5vh; 
+            font-family: My Font;
+            margin:0px;
+        }
+        img{
+            cursor: pointer;
+        }
+    
+        button{
+            color: rgb(59, 59, 187);
+            font-size: 20px;
+            font-weight: bold;
+            height: 5vh; 
+            font-family: My Font;
+            cursor: pointer;
+            background: linear-gradient(45deg, purple,orange);
+            border: 2px solid purple;
+            border-radius: 10px;
+            width: 20vw;
+        }
+        /* @property --gradient-angle{
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+        } */
+        @keyframes myGradient {
+            0%{--gradient-angle:0deg;}
+            100%{--gradient-angle:360deg;}
+        }
+        
+        
+    </style>
+    
+</head>
+<body>
+
+    <div id="container">
+            <p>Click to record</p> 
+            <img src="microphone2.png" alt="mic" id = "mic">
+            <button id="transcribe">Transcribe</button>
+        
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="speechRecognition.js"></script>
+</body>
+</html>

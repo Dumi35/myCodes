@@ -1,0 +1,168 @@
+@font-face {
+    font-family: "MyFont";
+    src: url("LilyScriptOne-Regular.ttf");
+}
+
+body{
+    background-color: rgb(26, 0, 34);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow-y: scroll;   
+    overflow-x: hidden;          
+    align-items: center;
+    justify-content: center;
+}
+
+body::-webkit-scrollbar {
+    width: 2px;              /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 2px;
+}
+
+#main{
+    width: 32vw;
+    height: 100vh;
+}
+
+#signUp{
+    width: 32vw;
+    height: 100vh;
+    background-color: rgb(17, 0, 22);
+    border: transparent;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    flex-direction: column;
+    box-shadow: 0px 4px 10px 2px black;
+    
+}
+
+#signUp>h2{
+    height: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-family: MyFont;
+}
+
+input{
+    font-family: MyFont;
+    width: 60%;
+    height: 7%;
+    margin-bottom: 10px;
+    font-size: 7px;
+}
+
+input:invalid{
+    color:red;
+    animation: shake 0.2s; 
+} 
+
+
+@keyframes shake{
+    0%{
+        transform: translateX(8px);
+    }
+    50%{
+        transform: translateX(-8px);
+    }
+    100%{
+        transform: translateX(8px);
+    }
+}
+
+.submit{
+    background-color: blueviolet;
+    color: white;
+    width: 60%;
+    height: 10%;
+    border:none;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    font-family: MyFont;
+    width: 60%;
+    height: 7%;
+    margin-bottom: 10px;
+    font-size: 7px;
+    cursor: pointer;
+}
+
+.submit:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255, 0) 30%,
+        rgba(255,255,255, .8),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+}
+
+#login{
+    width: 32vw;
+    height: 10vh;
+    background-color: white;
+    border: transparent;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    flex-direction: column;
+    box-shadow: 0px 4px 10px 2px black;
+    position: relative;
+    top:-20px;
+    color:rgb(90, 0, 117);
+    font-size: 13px;
+    font-family: MyFont;
+    overflow: hidden;
+    transition: 2s;
+    
+}
+
+#login:hover{
+    width: 32vw;
+    height: 100vh;
+    background-color: white;
+    border: transparent;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    flex-direction: column;
+    box-shadow: 0px 4px 10px 2px black;
+    transform: translateY(-200px);
+}
+
+#login>h2{
+    margin-top: 0px;
+    font-size: 13px;
+}
+
+#login:hover>h2{
+    height: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-family: MyFont;
+}
+

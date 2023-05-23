@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+    <div id="qrcode"></div>
+    <script type="text/javascript">
+    new QRCode(document.getElementById("qrcode"), "https://youtu.be/VZrDxD0Za9I");
+    </script>
+
+
+    <div id="qrcode-2"></div>
+    <script type="text/javascript">
+    var qrcode = new QRCode(document.getElementById("qrcode-2"), {
+        text: "https://webisora.com",
+        width: 50,
+        height: 50,
+        colorDark : "black",
+        colorLight : "white",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+    </script>
+
+    <script>
+        let array1=[1,4,4];
+        let array2=[1,2];
+        function polynomialDivision(){
+            let repeat = array2.length;
+            
+            while(array1.length>=array2.length){
+                let quotient = array1[0]/array2[0];
+                for (var i=0; i<repeat;i++){
+                    array1[i]=array1[i]-(quotient*array2[i]);
+                }
+                if(array1[0]==0){
+                    array1.shift();
+                }
+                
+            }
+            alert("The remainder is " + array1.toString());
+
+        }
+        //polynomialDivision();
+
+        const NUMERIC_RE = /^\d*$/;
+        const ALPHANUMERIC_RE = /^[\dA-Z $%*+\-./:]*$/;
+        const LATIN1_RE = /^[\x00-\xff]*$/;//for UTF encoding
+        const KANJI_RE = /^[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}]*$/u;
+        function getEncodingMode(string) {
+            if (NUMERIC_RE.test(string)) {
+                return 0b0001;
+            }
+            if (ALPHANUMERIC_RE.test(string)) {
+                return 0b0010;
+            }
+            if (LATIN1_RE.test(string)) {
+                return 0b0100;
+            }
+            if (KANJI_RE.test(string)) {
+                return 0b1000;
+            }
+            return 0b0111; 
+        }
+
+        let x = getEncodingMode('https://www.qrcode.com/');
+        alert(x);
+    </script>
+    
+</body>
+</html>
