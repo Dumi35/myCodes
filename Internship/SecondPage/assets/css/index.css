@@ -1,0 +1,445 @@
+/* fonts used */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+Display:wght@700&family=Open+Sans:wght@400;500&display=swap');
+
+
+
+
+:root{
+    --main-bg-clr: #ddcfc6;
+    --dark-txt-clr: #111;
+    --light-txt-clr: #fff;
+    --alt-bg-clr: #292d33;
+    --yellowish-clr: #f0aa00;
+    --font-Noto: 'Noto Sans Display', sans-serif;
+    --font-OpenSans: 'Open Sans', sans-serif;
+    --font-Montserrat:'Montserrat', sans-serif;
+    --font-size-xl: clamp(1.5rem, 3vw + 1rem, 2.25rem);
+    --font-size-norm: clamp(0.5rem, 1vw + 0.5rem, 1.125rem);
+}
+
+*{
+    margin: 0px;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 3rem;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section{
+    background-color: var(--main-bg-clr);
+    padding: 20rem 2rem 2rem;
+    padding-block: 10rem 2rem;
+    padding-inline: 4rem 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.main-hero-div{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    width: max(250px,80%);
+    border: 2px solid red;
+    min-height: 100%;
+    position: relative;
+}
+
+
+.hero-div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 2rem;
+    width: max(300px, 50%);
+    top: 100px;
+}
+
+.hero-div h1{
+    color: #111;
+    font-family: var(--font-Noto) ;
+    font-size: var(--font-size-xl);
+}
+
+.hero-div p{
+    color: #111;
+    font-family: var(--font-OpenSans);
+    font-size: var(--font-size-norm);
+    line-height: 1.8;
+    
+}
+
+.hero-div button{
+    background-color: black;
+    color: white;
+    padding-inline: min(20rem, 10vh);
+    padding-block: min(1.4rem, 10vh);
+    border-radius: 10px;
+    border: none;
+    margin: 30px auto 7rem 0;
+    letter-spacing: 2px;
+    font-family: var(--font-OpenSans);
+    font-size: var(--font-size-norm);
+}
+
+
+
+.card-1{
+    position: absolute;
+    background-color: orange;
+    width: min(50%,400px);
+    height: 502px;
+    top:30%;
+    right: 10%;
+    
+} 
+.card-2{
+    position: absolute;
+    object-fit: contain;
+    z-index: 2;
+    width: min(50%,400px);
+    top:40%;
+    right: 15%;
+}
+.card-3{
+    position: absolute;
+    top:50%;
+    right: 20%;
+    width: min(50%,400px);
+    background-image: url("../images/stripes.png");
+    background-size: contain;
+} 
+
+
+@media screen and (max-width:500px){
+    .hero-section{
+        flex-direction: column;
+        padding-inline: auto;
+    }
+
+    
+}
+
+
+.section-2{
+    background-color: var(--main-bg-clr);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-block: 3rem;
+}
+
+.section-2 h1{
+    font-family: var(--font-Noto);
+    font-size: clamp(1.5rem, 3vw + 1rem, 3rem);
+}
+
+.section-2 p{
+    font-family: var(--font-OpenSans);
+    font-size: clamp(1rem, 3vw + 1rem, 1.125rem);
+    text-align: center;
+    
+}
+
+
+.section-2-main-div{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.section-2-main-div p{
+    text-align: center;
+    font-family: var(--font-OpenSans);
+    font-size: clamp(0.7rem, 0.6vw + 0.7rem, 1.5rem);
+    text-align: center;
+    margin-top: 30px;
+    line-height: 1.5rem;
+}
+
+.first-grid{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(min(100%,250px),1fr));
+    margin-top: min(10vh,6rem);
+}
+
+.first-grid div{
+    padding: 2rem;
+    font-style: italic;
+    color: var(--alt-bg-clr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.circle{
+    background-color: white;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+
+.first-grid div h5{
+    font-family: var(--font-Noto);
+    font-size: 1.25rem;
+    font-style: normal;
+    margin-top: min(5vh,4rem) ;
+}
+
+.grid-2{
+    background-color: white;
+}
+.grid-4{
+    background-color: var(--yellowish-clr);
+}
+
+
+.section-3{
+    background-color: var(--alt-bg-clr);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 3rem;
+}
+
+.section-3 h1{
+    font-family: var(--font-Noto);
+    font-size: clamp(1.5rem, 3vw + 1rem, 3rem);
+}
+.section-3 p{
+    font-family: var(--font-OpenSans);
+    font-size: clamp(1rem, 3vw + 1rem, 1.125rem);
+    text-align: center;
+    margin-top: 33px;   
+}
+
+.section-3-div{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(min(100%,300px),1fr));
+    margin-top: min(10vh,6rem);
+}
+
+
+
+.section-3-div div img{
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+}
+.section-3-div div h5{
+   background-color: white;
+   color: #666;
+   text-align: center;
+   font-family: var(--font-Noto);
+   font-size: 1.25rem;
+   font-weight: 400;
+   padding: 1rem;
+}
+
+
+.section-5{
+    background-image: url("../images/yellowBg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-5 div{
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    flex: 2;
+    margin-right: 5rem;
+    margin-left: 1rem;
+}
+.section-5 h1{
+    font-family: var(--font-Noto);
+    font-size: clamp(1.5rem, 2vw + 0.5rem, 3rem);
+}
+.section-5 p{
+    font-family: var(--font-OpenSans);
+    line-height: 1.8;
+}
+.section-5 img{
+    flex: 1;
+    object-fit: cover;
+}
+.section-5 button{
+    margin-top: 2rem;
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    font-family: var(--font-OpenSans);
+    margin-bottom: 1rem;
+}
+
+
+.section-6{
+    background-color: black;
+    color: var(--yellowish-clr);
+    padding:2rem;
+
+}
+
+.section-6-grid div{
+    margin: 0 auto;    
+}
+
+.section-6 h1{
+    font-size: clamp(1.5rem, 3vw + 0.5rem, 3rem);
+    text-align: center;
+    font-family: var(--font-Noto);
+    
+}
+.section-6 h4{
+    font-size: 2rem;
+    font-family: var(--font-Noto);
+    margin-bottom: 2rem;
+}
+
+.section-6-grid p{
+    color: white;
+    font-size: clamp(0.9rem,2vw,1.25rem);
+    line-height: 3rem;
+    font-family: var(--font-OpenSans);
+}
+
+
+.section-6-grid{
+    margin-top: 3rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    
+}
+
+
+.section-8{
+    background-image: url("../images/hands.jpg");
+    min-height: 130vh;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.section-8 div{
+    width: 40%;
+    background-color: white;
+    margin-left: 5rem;
+    padding: 2rem;
+}
+
+.section-8 h1{
+    font-family: var(--font-Noto);
+    font-size: clamp(1.5rem, 3vw + 0.5rem, 3rem);
+
+}
+.section-8 div p{
+    font-size: clamp(0.9rem,2vw,1.25rem);
+    margin-top: 1rem;
+    font-family: var(--font-OpenSans);
+}
+
+.section-8 div button{
+    background-color: black;
+    color: white;
+    padding-inline: min(20rem, 10vh);
+    padding-block: min(1.4rem, 10vh);
+    border-radius: 10px;
+    border: none;
+    margin: 30px auto 0rem 0;
+    letter-spacing: 2px;
+    font-family: var(--font-OpenSans);
+    font-size: var(--font-size-norm);
+}
+
+.section-9{
+    background-color: var(--main-bg-clr);
+    padding-left: min(10%,400px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+.section-9 .text{
+    background-color: white;
+    text-align: center;
+    padding: 4rem;
+
+}
+.section-9 img{
+    width: 100%;
+    object-fit: contain;
+    
+    
+}
+
+.text h1{
+    font-family: var(--font-Noto);
+    font-size: 3rem;
+}
+
+.text p{
+    font-size: clamp(0.9rem,2vw,1.25rem);
+    font-family: var(--font-OpenSans);
+    margin-top: 2rem;
+}
+
+.contact{
+    font-size:1.375rem;
+    font-family: var(--font-Montserrat);
+    line-height: 3rem;
+}
+
+hr{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+span{
+    font-weight: bold;
+}
+
+span:last-child{
+   font-size: 1rem;
+   font-weight: 200;
+}
+
+footer{
+    background-color: var(--alt-bg-clr);
+    text-align: center;
+    padding: 3rem;
+    color: white;
+}
+
+footer p:nth-child(1){
+    margin-bottom: 5rem;
+}

@@ -1,0 +1,253 @@
+/* fonts used */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+Display:wght@700&family=Open+Sans:wght@400;500&display=swap');
+
+
+
+:root{
+    --main-bg-clr: #e0e5eb;
+    --dark-txt-clr: #111;
+    --light-txt-clr: #fff;
+    --alt-bg-clr: #555272;
+    --pinkish-clr: #c71e38;
+    --font-Noto: 'Noto Sans Display', sans-serif;
+    --font-OpenSans: 'Open Sans', sans-serif;
+    --font-Montserrat:'Montserrat', sans-serif;
+    --font-size-xl: clamp(1.5rem, 3vw + 1rem, 2.25rem);
+    --font-size-norm: clamp(0.5rem, 1vw + 0.5rem, 1.125rem);
+}
+
+
+*{
+    margin: 0px;
+}
+
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 3rem;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.hero-section{
+    width: 100%;
+    background-image: url("images/main-bg-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80% 50%;
+    
+}
+
+.hero-txt{
+    margin-inline: 8rem auto;
+    width: 60%;
+}
+
+@media screen and (max-width:800px){
+    .hero-txt{
+        margin-inline: auto;
+    }
+    
+}
+
+.hero-txt h1{
+    color: var(--pinkish-clr);
+    font-size: clamp(2rem, 5vw + 1rem, 4.5rem);
+    margin-top: 3rem;
+    font-family: var(--font-Montserrat);
+}
+
+.hero-txt p{
+    color: #111;
+    margin-top: 2rem;
+    font-family: var(--font-OpenSans);
+    font-size: clamp(1rem, 3vw + 0.3rem, 1.5rem);
+    
+}
+
+.Freepik{
+    margin-block: 2rem 4rem;
+    font-family: var(--font-OpenSans);
+    color: #111;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.hero-grid{
+    display: grid;
+    gap: 0.7rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(min(100%,250px), 1fr));
+}
+
+.hero-grid img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+/* Second section of page */
+.section-2{
+    background-color: #555272;
+    color: white;
+    padding: 5rem 4rem;
+}
+
+.section-2-main-grid{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.section-2-txt{
+    flex: 1 1 300px;
+}
+
+
+.section-2-txt h3{
+    font-size: 3rem;
+    font-family: var(--font-Montserrat);
+}
+.section-2-txt p{
+    font-size: 1.2rem;
+    font-family: var(--font-OpenSans);
+    line-height: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section2-catalog{
+    flex: 1 1 500px;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.section2-catalog > div{
+    text-align: center;
+    flex: 1;
+    flex-basis: 100px;
+}
+
+.section2-catalog > div h4{
+    font-size: 2rem;
+    
+}
+
+.section2-catalog > div p{
+    font-size: 1.3rem;
+    
+}
+.section2-catalog img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    
+} 
+
+
+.section-3{
+    background-color: var(--main-bg-clr);
+    padding: 10rem 4rem;
+    
+}
+
+@media screen and (max-width:900px) {
+    .section-3{
+        padding: 2rem 1rem;
+    }
+}
+
+
+.section-3 div{
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-3-txt{
+    background-color: white;
+    padding: 5rem;
+    flex: 1 1 200px;
+    
+}
+
+
+.section-3-txt h1{
+    font-family: var(--font-Montserrat);
+    font-size: clamp(2rem,2vw + 1rem, 3rem);
+    margin-bottom:1rem;
+    
+}
+.section-3-txt p{
+    font-family: var(--font-OpenSans);
+    font-size:clamp(0.7rem,3vw + 0.1rem,1rem);
+    margin-bottom:2rem;
+    line-height: 2rem;
+}
+
+.section-3-txt button{
+   border: 2PX solid var(--alt-bg-clr);
+   padding: 1rem 2rem;
+   font-size: 1rem;
+   font-family: var(--font-OpenSans);
+   cursor: pointer;
+}
+
+.section-3-img{
+    width: 100%;
+    object-fit: cover;
+    flex: 1 1 500px;
+}
+.section-3 img{
+    max-width: 100%;
+}
+
+
+.section-6{
+    background-color: var(--main-bg-clr);
+    text-align: center;
+    padding-block: min(10vh,5rem);
+    padding-inline: min(20vw,10rem);
+    align-items: center;
+}
+
+.section-6 h1{
+    font-size: clamp(1rem, 3vw + 0.7rem, 3rem);
+    font-family: var(--font-Montserrat);
+}
+
+.section-6 hr{
+    background-color: var(--pinkish-clr);
+    margin: 2rem;
+    height: 0.3rem;
+}
+
+.section-6 p{
+    font-size: clamp(1rem,2vw + 0.3rem,1.5rem);
+    line-height: 3rem;
+    font-family: var(--font-OpenSans);    
+}
+
+.section-6 h2{
+    margin: 3rem;
+    font-size: clamp(1rem,2vw + 0.7rem,2rem);
+    font-family: var(--font-OpenSans);  
+}
+
+h2 a{
+    color: black;
+}
+
+.section-6 h2 a:hover{
+    color: var(--pinkish-clr);   
+}

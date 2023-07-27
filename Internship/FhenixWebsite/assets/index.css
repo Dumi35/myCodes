@@ -1,0 +1,148 @@
+:root{
+
+}
+
+*{
+    margin: 0px;
+}
+
+header{
+    background-color: white;
+    padding: 2rem;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo{
+    flex: 1 1 200px;
+}
+
+.logo img{
+    object-fit: cover;
+}
+
+.links{
+    flex: 1 1 600px;
+   
+}
+
+.links ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+}
+
+.links ul li{
+    flex: 1 1 100px;
+    list-style-type: none;
+}
+
+.links ul li a{
+    color: black;
+}
+.links ul li a:active{
+    color: blue;
+}
+.links ul li a:hover{
+    color: blue;
+}
+
+.hero-section{
+    background-image: url("images/Frame45.png");
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-div{
+    width: 60%;
+    text-align: center;
+    color: white;
+}
+
+.hero-div h1{
+    font-size: 3rem;
+}
+
+.hero-div p{
+    margin: 2rem;
+}
+
+.hero-div button{
+    border: 2px solid white;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    color: white;
+}
+
+.section-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-2 h2{
+    margin: 3rem;
+}
+
+.section-2-txt{
+    display: flex;
+    gap: 2rem;
+    width: 80%;
+}
+.section-2-txt .why{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.section-2-txt img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-2-content h3{
+    margin-bottom: 0.3rem;
+}
+
+
+.section-3{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 4rem 1rem;
+}
+
+.section-3 h1{
+    font-size: 3rem;
+    margin: 2rem;
+}
+
+.section-3-grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 2rem;
+}
+
+.section-3-grid div{
+    flex: 1 1 200px;
+}
+.section-3-grid p{
+    margin-block: 1rem;
+}
+
+
+.section-3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
