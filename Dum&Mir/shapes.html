@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: orange;
+    }
+    /* #group{
+      animation: round 3s infinite linear;
+      transform-origin: center;
+      transform-box: fill-box;
+    }
+    @keyframes round{
+      0%{
+        transform: rotateZ(0deg);
+      }
+      25%{
+        transform: rotateZ(90deg);
+      }
+      50%{
+        transform: rotateZ(180deg);
+      }
+      100%{
+        transform: rotateZ(360deg);
+      } 
+    }  */
+    
+  </style>
+</head>
+<body>
+  
+
+  
+  <svg width="100%" height='300'
+  viewbox="-100 -100 1000 1000"
+  >
+    
+  <defs>
+    <path stroke="black" stroke-width="3" id = 'stick'
+      d="M 0 0
+      L 0 100
+      M 0 80
+      L 30 70
+      M 0 80
+      L -30 70
+      M 0 50
+      L 30 40
+      M  0 50
+      L -30 40
+      M 0 20
+      L 30 10
+      M 0 20
+      L -30 10
+       "
+    />
+   </defs>
+   <g id="group" width="100%" height='300'>
+    <use href="#stick"></use>
+    <use href="#stick" transform = 'rotate(45)'></use>
+    <use href="#stick" transform = 'rotate(90)'></use>
+    <use href="#stick" transform = 'rotate(135)'></use>
+    <use href="#stick" transform = 'rotate(180)'></use>
+    <use href="#stick" transform = 'rotate(225)'></use>
+    <use href="#stick" transform = 'rotate(270)'></use>
+    <use href="#stick" transform = 'rotate(315)'></use>
+  </g>  
+  </svg>
+  
+  
+</body>
+
+<script>
+  let xOffset=0; 
+  let yOffset=0;
+  window.addEventListener('keydown', (e) => {
+    if (event.defaultPrevented) {
+      return; // Do nothing if the event was already processed
+    }
+    switch (e.key) {
+      case "ArrowRight":
+        xOffset += 100;
+        moveSection("group");
+       
+        break;
+      case "ArrowLeft":
+        xOffset -= 100;
+        moveSection("group");
+        break;
+
+      case "ArrowUp":
+        yOffset -= 100;
+        moveSection("group");
+        break;
+
+      case "ArrowDown":
+        yOffset += 100;
+        moveSection("group");
+        break;  
+
+      default: 
+        return;
+    }
+    e.preventDefault();
+},true) 
+
+  function moveSection(idStr) {
+    var domElemnt = document.getElementById(idStr);
+    if (domElemnt) {
+        var transformAttr = ' translate(' + xOffset + ','+ yOffset+')';
+        domElemnt.setAttribute('transform', transformAttr);
+        
+    }
+    var stick = document.getElementById('stick');
+    stick.setAttribute("stroke","red");
+    Rotate();
+  }
+  function Rotate(){
+    stick.animate([
+    //keyframes round
+      {transform:'rotateZ(0deg)'},
+      {transform:'rotateZ(90deg)'},
+      {transform:'rotateZ(180deg)'},
+      
+  ],
+  {
+    duration: 3000,
+    iterations: Infinity,
+  })}
+  
+
+</script>
+</html>

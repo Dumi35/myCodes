@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dumi Weather</title>
+    <link rel="stylesheet" href="assets/index2.css">
+    <link rel='stylesheet'
+   href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+
+</head>
+
+<body>
+    <main>
+        <section class="searchBar">
+            <input type="text" id="city" placeholder="City, Location">
+            <button onclick="changeCity();getWeather();"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </section>
+
+        <section class="weatherDetails">
+            <div class="daily">
+                <p id="date"></p>
+                <div>
+                    <p id="cityName">Lagos</p>
+                    <p id="chance">Chance of Rain: 28-35%</p>
+                    <h1 id="temperature">34<sup id="degree">o</sup></h1>
+                    <img src="assets/images/cloud.png" alt="" id="weatherimg">
+                    <p class="weatherDesc">CLOUDY</p>
+                </div>
+            </div>
+            <div class="weekly">
+                <div class="Monday">
+                    <h3>Monday</h3>
+                    <p id="oneDay">July 24</p>
+                    <img src="assets/images/cloud.png" alt="" id="cloud" >
+                    <p class="tempRange">28~32 <sup>O</sup>C</p>
+                    <p class="weatherDesc">CLOUDY</p>
+                    <p class="windSpeed">Wind: 8km/h</p>
+                </div>
+                <div class="Tuesday">
+                    <h3>Tuesday</h3>
+                    <p id="twoDays">July 25</p>
+                    <img src="assets/images/thundercloud.png" alt="">
+                    <p class="tempRange">28~32 <sup>O</sup>C</p>
+                    <p class="weatherDesc">RAINSTORM</p>
+                    <p class="windSpeed">Wind: 8km/h</p>
+                </div>
+                <div class="Wednesday">
+                    <h3>Wednesday</h3>
+                    <p id="threeDays">July 24</p>
+                    <img src="assets/images/sun.png" alt="">
+                    <p class="tempRange">28~32 <sup>O</sup>C</p>
+                    <p class="weatherDesc">SUNSHINE</p>
+                    <p class="windSpeed">Wind: 8km/h</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/script.js"></script>
+</body>
+</html>
