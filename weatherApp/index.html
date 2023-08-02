@@ -14,7 +14,10 @@
 <body>
     <main>
         <section class="searchBar">
-            <input type="text" id="city" placeholder="City, Location">
+            <input type="text" id="city" placeholder="City, Location" list="cities">
+            <datalist id="cities">
+                <!-- Options will be added here dynamically -->
+            </datalist>
             <button onclick="changeCity();getWeather();"><i class="fa fa-search" aria-hidden="true"></i></button>
         </section>
 

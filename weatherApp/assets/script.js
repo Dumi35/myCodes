@@ -9,7 +9,7 @@ let weatherimg=document.getElementById("weatherimg")
 const weatherApiKey = "626f12f3b24cd6f2a652f4fd64480f45"
 const timeZoneApiKey = "KYDNPRO7B7G1"
 
-
+const locationApiKey="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"
 function changeCity(){
     cityName.innerText=searchedCity.value
 }
@@ -90,4 +90,23 @@ async function getCurrentDate(){
      
 
 }
+
+
+
+
+async function fetchCityData(){
+    let Url="https://countriesnow.space/api/v0.1/countries/states"
+    const response = await fetch(Url)
+    const data = await response.json();
+    
+    const datalist = document.getElementById('cities');
+
+    data.data.forEach(city=>{
+        const option = document.createElement('option');
+        option.value = city.name;
+        datalist.appendChild(option);
+    })
+}
+
+fetchCityData()
 
