@@ -17,7 +17,7 @@
     
     <main>
         <div class="img">
-            <img src="assets/images/ebc51172c30ad05d9ffeb62a54a9d568.jpg" alt="">
+            <img src="assets/images/ebc51172c30ad05d9ffeb62a54a9d568.jpg" alt="cute snowman">
         </div>
         <form action="">
             <h1>Sign in to Weather</h1>
@@ -27,8 +27,8 @@
                 <div></div>
             </div>
             <p>or use your email account</p>
-            <input type="text" name="" id="" placeholder="Email">
-            <input type="password" name="" id="" placeholder="Password">
+            <input type="email" name="" id="email" placeholder="Email" required>
+            <input type="password" name="" id="password" placeholder="Password" required>
             <p class="forgot">
                 Forgot your password?
             </p>
@@ -36,5 +36,26 @@
         </form>
     </main>
 
+    <script>
+        const email = document.getElementById("email")
+        const password = document.getElementById("password")
+        const button = document.querySelector("button")
+
+        button.addEventListener("click", e=>{
+            const obj={
+                email:email.value,
+                password:password.value
+            }
+            //http://127.0.0.1:4000
+            fetch("http://localhost:3000/sign-up",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify(obj)
+            })
+
+        })
+    </script>
 </body>
 </html>

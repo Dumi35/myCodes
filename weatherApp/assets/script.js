@@ -16,7 +16,7 @@ function changeCity(){
 
 async function getWeather(){
     let city = cityName.innerText
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherApiKey}&units=metric`)
+    const response = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherApiKey}&units=metric`)
     const data = await response.json();
     console.log(data)
 
@@ -110,3 +110,40 @@ async function fetchCityData(){
 
 fetchCityData()
 
+let list1=[1,2,3]
+
+let people = {
+    Great:19,
+    Angel:15,
+    Joshua:12
+}
+
+
+
+
+let weather = {
+    sunny:"yes",
+    rainy:"no",
+    people:25,
+    People:30,
+    thunder:[
+        {
+            storm:"yes",
+            windy:{
+                tree:4,
+                class:"food"
+            }
+        }
+    ],
+    class:"red",
+    "why":"play",
+    why:1
+}
+
+
+
+console.log(weather)
+
+console.log(people.Great)
+console.log(weather.people)
+console.log(weather.People)

@@ -1,0 +1,62 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+Display:wght@700&family=Open+Sans:wght@400;500&family=Poppins:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+.hero-h1{
+    font-size: 3rem;
+}
+
+.icon-box{
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.icon{
+   font-size: 28px;
+   color: #151515;
+}
+
+.features-flex{
+    display: flex;
+    gap: 1rem;
+}
+.features-flex div i{
+   color: #ffc451;
+   font-size: 32px;
+   font-weight: 700;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+}
+
+.services{
+    margin-top: 3rem;
+}
+
+.services .row{
+    margin-top: 3rem;
+}
+.services p:not(.row p){
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.portfolio ul{
+    list-style-type: none;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.counts img{
+    width: 100%;
+    object-fit: cover;
+}
+
+

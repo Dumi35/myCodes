@@ -17,3 +17,4 @@ window.addEventListener("scroll",()=>{
     hill5.style.left=value*1 + "px"
     /*  */
 })
+

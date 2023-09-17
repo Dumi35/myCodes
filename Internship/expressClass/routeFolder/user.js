@@ -1,23 +1,37 @@
 const express = require("express");
 const router = express.Router();
+const taskCollection = require("../models/taskModel");
 
 let users = [];
 
-router.get("/", function(req, res) {
-    res.send(users);
+router.get("/", async function(req, res) {
+
+    res.send(await taskCollection.find());
 });
 
-router.get("/:id", function(req, res) {
-    res.send(req.params.id);
+router.get("/:id", async function(req, res) {
+    res.send(await taskCollection.findById(req.params.id));
 });
 
-router.post("/", function(req, res) {
-    const id = Math.ceil(Math.random() * 10);
-    const newUser = {
-        id,
-        ...req.body
-    };
-    users.push(newUser);
+router.post("/", async function(req, res) {
+    const newUser = await taskCollection.create(req.body);
+    res.send(newUser);
+});
+
+router.put("/:id", function(req, res) {
+    users = users.map(user => {
+        if(req.params.id == user.id) {
+            return req.body;
+        }
+        return user;
+    });
+    res.send("Put");
+});
+
+router.delete("/:id", function(req, res) {
+    users = users.filter(user => {
+        return user.id != req.params.id;
+    });
 });
 
 module.exports = router;

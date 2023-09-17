@@ -1,1 +1,32 @@
-GET http://127.0.0.1:4000
+
+# GET http://127.0.0.1:4000/hello
+
+
+
+
+# POST http://127.0.0.1:4000/hello
+# Content-Type: application/json
+
+# {
+#     "title": "First title edited",
+#     "body": "First body edited"
+# }
+
+
+
+# POST http://127.0.0.1:4000/hello
+# Content-Type: application/json
+
+# {
+#     "title": "Second title edited",
+#     "body": "Second body edited"
+# }
+
+
+# PUT http://127.0.0.1:4000/hello/
+# Content-Type: application/json
+
+# {
+#     "title": "Second title edited",
+#     "body": "Second body edited"
+# }
