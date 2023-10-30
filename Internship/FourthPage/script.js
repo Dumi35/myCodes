@@ -1,7 +1,7 @@
   
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            const square = entry.target.querySelectorAll('div');
+            const square = entry.target.querySelectorAll('*');
     
             square.forEach(element=>{
                 const value = element.getAttribute("data-animation")
@@ -21,6 +21,7 @@
 
 //observer.observe(document.querySelector('.grid')[0]);
 observer.observe(document.getElementsByClassName('grid')[0]); 
+observer.observe(document.getElementsByClassName('flex')[0]); 
 observer.observe(document.getElementsByClassName('flex')[1]); 
 
 
