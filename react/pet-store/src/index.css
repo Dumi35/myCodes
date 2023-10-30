@@ -1,0 +1,203 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans&family=Open+Sans:wght@400;700&family=Outfit&display=swap');
+
+  :root{
+    --brown: #A74B08;
+  }
+
+  body{
+    font-family: "Outfit", sans-serif;
+    padding-inline: calc(5vw + 1rem);
+    scroll-behavior: smooth;
+  }
+
+  nav{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .logo{
+    flex-basis: 30%;
+  }
+
+  .logo img{
+    width: 50px;
+    aspect-ratio: 1;
+  }
+
+  .navLinks{
+    display: flex;
+    gap: 3rem;
+    font-size: 20px;
+  }
+
+  a{
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: var(--brown);
+  }
+
+  .active{
+    color: var(--brown);
+  }
+
+  .hero-section{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  h1{
+    font-size: clamp(2rem,15px + 2rem, 4rem);
+  }
+
+  p{
+    font-size: 25px;
+  }
+
+  .hero-text{
+    flex-basis: 550px;
+    flex-grow: 999;
+  }
+
+  .hero-img{
+    flex-basis: 400px;
+    justify-content: center;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    position: relative;
+  }
+
+  .hero-img img{
+    width: 100%;
+    object-fit: cover;
+    max-height: 200px;
+  }
+
+  #blobSvg{
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: -120px;
+    opacity: 80%;
+  }
+
+  .headings{
+    text-align: center;
+  }
+
+  #yarn{
+    position: absolute;
+    right: 0;
+    top: 60px;
+  }
+
+  #tennisBall{
+    position: absolute;
+    top: 200px;
+    left: 120px;
+  }
+
+  #bone{
+    position: absolute;
+    top: 0;
+  }
+
+  .shop{
+    position: relative;
+  }
+
+  .categories{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(min(200px,100%),1fr));
+    place-items: center;
+    gap: 1rem;
+  }
+
+  .categories div{
+    border: none;
+    border-radius: 10px;
+    aspect-ratio: 1;
+    padding: 10px;
+    box-shadow: 0px 0px 4px gray;
+    max-width: 300px;
+  }
+
+  .categories div img{
+    width: 100%;
+  }
+  .categories div p{
+    text-align: center;
+  }
+
+  .AboutTxt{
+    display: flex;
+  }
+
+  .AboutTxt p{
+    flex-basis: 60%;
+  }
+  .AboutTxt div {
+    flex-basis: 45%;
+  }
+  .AboutTxt div img{
+    width: 100%;
+  }
+
+  .shopItem{
+    display: flex;
+  }
+
+  .mainShop {
+    display: flex;
+    border: 2px solid red;
+  }
+
+  .shopItem{
+    width: 500px;
+  }
+
+  button{
+    background-color: var(--brown);
+    font-family: "Outfit", sans-serif;
+    color: white;
+    cursor: pointer;
+  }
+
+  .mainDogBody{
+    display: flex;
+  }
+  .mainDogBody p{
+    font-size: 20px;
+  }
+
+
+.mainCatBody{
+  display: grid;
+  width:100%;
+  height: 300px;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-auto-rows: 120px auto auto;
+}
+
+.product{
+  display:grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+}
+
+.product img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product p{
+  font-size: 20px;
+  
+}

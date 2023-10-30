@@ -4,148 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="index2.css">
-    <link rel="/dist/output.css" href="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body class="flex-center bg-black">
-    <nav class="bg-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between">
-                <div class="flex space-x-7">
-                    <div>
-                        <!-- Website Logo -->
-                        <a href="#" class="flex items-center py-4 px-2">
-                            <img src="logo.png" alt="Logo" class="h-8 w-8 mr-2">
-                            <span class="font-semibold text-gray-500 text-lg">Navigation</span>
-                        </a>
-                    </div>
-                    <!-- Primary Navbar items -->
-                    <div class="hidden md:flex items-center space-x-1">
-                        <a href="" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Home</a>
-                        <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Services</a>
-                        <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">About</a>
-                        <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contact Us</a>
-                    </div>
-                </div>
-                <!-- Secondary Navbar items -->
-                <div class="hidden md:flex items-center space-x-3 ">
-                    <a href="" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Log In</a>
-                    <a href="" class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">Sign Up</a>
-                </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button class="outline-none mobile-menu-button">
-                    <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
-                        x-show="!showMenu"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-                </div>
-            </div>
-        </div>
-        <!-- mobile menu -->
-        <div class="hidden mobile-menu">
-            <ul class="">
-                <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
-                <li><a href="#services" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Services</a></li>
-                <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About</a></li>
-                <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>
-            </ul>
-        </div>
-       
-    </nav>
-    
-   <!-- <div class="circular-slider flex-center">
-        <div class="wrapper flex-center">
-            <li class="slides" style="--img-no:1;"><img src="plane.png" alt=""></li>
-            <li class="slides" style="--img-no:2;"><img src="assets/images/hands.jpg" alt=""></li>
-            <li class="slides" style="--img-no:3"><img src="assets/images/why.png" alt=""></li>
-            <li class="slides" style="--img-no:4"><img src="assets/images/image3.jpg" alt=""></li>
-            <li class="slides" style="--img-no:5"><img src="assets/images/engineering.png" alt=""></li>
-        </div>
-   </div> -->
-   
-   <!-- component -->
-   <button id="openModal" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Open Modal</button>
+    <!-- <link rel="stylesheet" href="index2.css"> -->
+    <!-- <link rel="/dist/output.css" href="stylesheet"> -->
 
-   <div id="modal" data-te-modal-init
-   class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none bg-gray-500 bg-opacity-50 flex justify-center rounded-3xl"
-   id="exampleModalLong"
-   tabindex="-1"
-   aria-labelledby="exampleModalLongLabel"
-   aria-hidden="true">> 
-       <div class="bg-white p-4 rounded shadow-md flex flex-col  items-center w-[70vw] overflow-y-auto rounded-xl">
-            <h1 class="font-bold text-center font-[Montserrat] text-3xl ">Robotics</h1>
-            <p class="my-4 hidden lg:block font-[Montserrat]">Welcome to the exciting world of robotics at the Aceplora TechCamp! From wiring circuits to coding the instructions that make your robots move, you will bring your imagination to life and create robots capable of performing amazing tasks. Using cutting-edge hardware and software, you’ll learn how to program sensors, motors, and other components to create robots that can navigate mazes, run errands, automate household appliances, perform complex tasks, and even battle other robots in thrilling competitions. Join us and discover the endless possibilities of robotics!</p>
-            <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-4">
-                <div class="text-white flex flex-col bg-[#FA6804] px-8 py-4 items-center rounded-lg">
-                    <h1 class="font-[Montserrat] font-bold text-center text-xl">Online Classes</h1>
-                    <div class="bg-[white] w-[100px] h-[3px]"></div>
-                    <p class="text-center my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim porro aut quisquam voluptatibus maxime dolorem quia, numquam sunt. Laborum perferendis dolorem sit architecto doloribus tempora, dicta totam quae ex amet?</p>
-                </div>
-                <div class="text-white flex flex-col bg-[#FA6804] px-8 py-4 items-center rounded-lg">
-                    <h1 class="font-[Montserrat] font-bold text-center text-xl">Online Classes</h1>
-                    <div class="bg-[white] w-[100px] h-[3px]"></div>
-                    <p class="text-center my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim porro aut quisquam voluptatibus maxime dolorem quia, numquam sunt. Laborum perferendis dolorem sit architecto doloribus tempora, dicta totam quae ex amet?</p>
-                </div>
-                <div class="text-white flex flex-col bg-[#FA6804] px-8 py-4 items-center rounded-lg">
-                    <h1 class="font-[Montserrat] font-bold text-center text-xl">Online Classes</h1>
-                    <div class="bg-[white] w-[100px] h-[3px]"></div>
-                    <p class="text-center my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim porro aut quisquam voluptatibus maxime dolorem quia, numquam sunt. Laborum perferendis dolorem sit architecto doloribus tempora, dicta totam quae ex amet?</p>
-                </div>
-                
-            
-                
-            </div>
-            <div>
-                <button id="closeModal" class="mt-4 bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600">Close</button>
-                <button id="Register" class="mt-4 bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600">Register</button>
-            </div>
-       </div>
-   </div>
-
-   
-   <script>
-    function close(){
+    <style>
         
-        alert("yay")
-    }
+        body{
+            background-color: white;
+            /* cursor: none; */
+            
+        }
 
-        const openModalButton = document.getElementById('openModal');
-        const closeModalButton = document.getElementById('closeModal');
-        const modal = document.getElementById('modal');
+        .small{
+            width: 6px;
+            height: 6px;
+            
+            border-radius: 50%;
+            box-shadow:
+                10px 10px 20px 20px red,
+                10px 10px 30px 30px orange,
+                10px 10px 40px 40px yellow,
+                10px 10px 50px 50px green,
+                10px 10px 600px 60px blue,
+                10px 10px 70px 70px indigo,
+                10px 10px 80px 80px violet;
+        }
 
-        openModalButton.addEventListener('click', () => {
-            modal.classList.remove('hidden');
-        });
 
-        closeModalButton.addEventListener('click', () => {
-            modal.classList.add('hidden');
-        });
+        :root {
+  --svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" viewBox="0 0 500 500"><path><animate attributeName="d" dur="8000ms" repeatCount="indefinite" values="M389,301Q332,352,270,392.5Q208,433,131.5,388.5Q55,344,62.5,253.5Q70,163,139,113.5Q208,64,306.5,60Q405,56,425.5,153Q446,250,389,301Z; M398,321Q363,392,287.5,403.5Q212,415,120.5,386Q29,357,51.5,261Q74,165,144.5,130Q215,95,309.5,76Q404,57,418.5,153.5Q433,250,398,321Z; M384.5,331Q379,412,295.5,415Q212,418,161.5,367.5Q111,317,103.5,246.5Q96,176,150.5,113.5Q205,51,287,76Q369,101,379.5,175.5Q390,250,384.5,331Z; M389,301Q332,352,270,392.5Q208,433,131.5,388.5Q55,344,62.5,253.5Q70,163,139,113.5Q208,64,306.5,60Q405,56,425.5,153Q446,250,389,301Z" /></animate></path></svg>');
+}
+
+        .girl{
+            height:500px;
+            width:500px;
+            mask-image: url("assets/images/blob2.svg");
+            mask-position: 10% 60%;
+            mask-repeat: no-repeat;
+               
+        }
+
+        .masked-image {
+            width: 300px;
+            height: 200px;
+            background-image: url('assets/images/girlWriting.png');
+            background-size: cover;
+            background-position: 0 60%;
+            mask-image: url('assets/images/blob.svg');
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            mask-position: center;
+            
+        }
+
+        #blob{
+            background-image: url("assets/images/girlWriting.png"); 
+            background-size:cover
+        }
+
+        .menu-container {
+  position: relative;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 150px;
+}
+
+.menu-trigger:hover + .menu,
+.menu:hover {
+  display: block;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- <p style="color: white; text-shadow: 0 0 7px #fff,  0 0 10px #fff,  0 0 21px #fff,  0 0 42px #0fa,  0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa ; text-align: center;">UNICORN</p>
+    <div>
+        <div class="cursor small"><img src="assets/images/unicorn-nobg.png" alt="" style="height: 70px; width: 70px;" srcset=""></div>
+       <p style="position: absolute; z-index: 2;"> 
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam laboriosam labore quibusdam nesciunt omnis, consequuntur explicabo, nemo nam aperiam dicta facilis tempora ea quos similique. Eaque, consequatur. Facilis, tempore obcaecati!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus veniam commodi esse nihil adipisci vel, soluta deleniti repellat repellendus minus, laudantium est? Temporibus voluptatum dolorum tempora earum quo dicta quasi.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et provident est eos laudantium, eius a sed, quibusdam consequuntur dolores sit culpa perferendis consectetur molestias sequi eligendi praesentium? A, necessitatibus enim.
+        </p>
+    </div> -->
+
+    <img src="assets/images/girlWriting.png" alt="girl" class="girl">
+    <div class="masked-image"></div>
+
+    <div class="menu-container">
+        <div class="menu-trigger">Hover Me</div>
+        <div class="menu">
+          <ul>
+            <li>Menu Item 1</li>
+            <li>Menu Item 2</li>
+            <li>Menu Item 3</li>
+          </ul>
+        </div>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis et praesentium voluptatem dolore, iste tempore odit sapiente eum, veritatis iusto necessitatibus est numquam facere ipsam molestias itaque esse officiis nam!</p>
+
     
-   </script>
-   
-   
-   <script src="https://cdn.tailwindcss.com"></script>
+    <div style="width: 700px;">
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color: rgb(255, 95, 109);"></stop>
+                <stop offset="100%" style="stop-color: rgb(255, 195, 113);"></stop>
+              </linearGradient>
+            </defs>
+            <path fill="url(#gradient)" id="blob" >
+                <animate attributeName="d" dur="8000ms" repeatCount="indefinite"
+                
+                values="M389,301Q332,352,270,392.5Q208,433,131.5,388.5Q55,344,62.5,253.5Q70,163,139,113.5Q208,64,306.5,60Q405,56,425.5,153Q446,250,389,301Z;
+                
+                M398,321Q363,392,287.5,403.5Q212,415,120.5,386Q29,357,51.5,261Q74,165,144.5,130Q215,95,309.5,76Q404,57,418.5,153.5Q433,250,398,321Z;
+                
+                M384.5,331Q379,412,295.5,415Q212,418,161.5,367.5Q111,317,103.5,246.5Q96,176,150.5,113.5Q205,51,287,76Q369,101,379.5,175.5Q390,250,384.5,331Z;
+                
+                M389,301Q332,352,270,392.5Q208,433,131.5,388.5Q55,344,62.5,253.5Q70,163,139,113.5Q208,64,306.5,60Q405,56,425.5,153Q446,250,389,301Z">
 
+                </animate>
+
+            </path>
+        </svg>
+
+    </div>
+
+
+   <!--  <script>
+        const cursorSmall = document.querySelector('.small');
+
+        const positionElement = (e)=> {
+        const mouseY = e.clientY;
+        const mouseX = e.clientX;
+
+        cursorSmall.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+
+        }
+
+        window.addEventListener('mousemove', positionElement)
+    </script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     <script>
-        const btn = document.querySelector("button.mobile-menu-button");
-        const menu = document.querySelector(".mobile-menu");
-
-        btn.addEventListener("click", () => {
-            menu.classList.toggle("hidden");
-        });
+        gsap.to("#circle", {duration: 1, morphSVG:"#hippo"});
     </script>
-
 </body>
+
 </html>

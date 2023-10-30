@@ -9,7 +9,7 @@ const MyCalendar = () => {
   const events = [
     {
       title: 'Meeting',
-      start: new Date(2023, 8, 18, 10, 0),
+      start: new Date(2023, 8, 18, 10, 30),  /* yr, mnth,day, hr, min */
       end: new Date(2023, 8, 18, 12, 0),
     },
     // Add more events here...

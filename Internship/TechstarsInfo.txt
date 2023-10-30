@@ -1,0 +1,12 @@
+Techstars is an online educational platform by Fhenix Africa for kids between ages 6-18
+where they can access courses, answer quizzes, attend online classes on Google Meets
+and many more all from the comfort of their homes.
+
+It provides a range of 5 various courses: Front end web dev, Back end web dev, 
+Scratch animation, UI/UX design, and Basic ICT.
+
+It uses a subscription-based plan where users will have to pay a fee of N30,000 to 
+register and continuously pay this same fee every 3 months to keep accessing the 
+website's resources.
+
+Though Basic ICT would be free for the first month.
