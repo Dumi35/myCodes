@@ -23,10 +23,11 @@ body{
     
 }
 
+
 .hero-section .flex, .section6 .flex{
     padding-inline: max(20vh, 2rem);
     padding-block: max(5vh, 1rem);
-    background-color: black;
+    /* background-color: black; */
     color: white;
     display: flex;
     flex-wrap: wrap;
@@ -35,7 +36,10 @@ body{
     justify-content: center;
 }
 
-
+.hero-section p{
+    color: black;
+    
+}
 
 .flex div{
     flex-basis: 200px;
@@ -273,7 +277,7 @@ form{
     gap: 1rem;
 }
 
-form h2, label{
+form{
     color: black;
 }
 
@@ -292,6 +296,11 @@ form input:not([type="checkbox"]), form textarea{
     width: 100%;
 }
 
+/* form input:not([type="checkbox"]), form input:focus{
+    border-inline: none;
+} */
+
+
 form [placeholder]{
     font-family: "Outfit", sans-serif;
 }
@@ -309,6 +318,17 @@ footer{
 
 footer a{
     color:#adcce9;
+}
+
+#emailSent{
+    background-color: rgba(81, 228, 105, 0.5);
+    color: red;
+    padding: 5px;
+    width: fit-content;
+    border: none;
+    display: none;
+    font-size: 0.7rem;
+    border-radius: 5px;
 }
 
 @media (max-width:480px) {
